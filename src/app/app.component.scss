@@ -1,0 +1,42 @@
+$primary-color: #FFFFFF;
+$pageDarkBlue: rgb(3,37,65);
+$headerFontSize:16px;
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    background-color: $pageDarkBlue;
+    color: $primary-color;
+    font-weight: 600;
+    
+    .container{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    img.logo{
+        width: 154px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction:row;
+        margin-bottom: 0;
+        li{
+            font-size: $headerFontSize;
+            padding: 0 20px;
+
+            a{
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+  }

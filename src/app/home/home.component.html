@@ -1,0 +1,38 @@
+<div class="main">
+    <div class="container">
+        <div class="banner">
+            <h2>Hoş Geldiniz.</h2>
+            <h4>Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.</h4>
+            <div class="search">
+                <input type="text" placeholder="Film, dizi, kişi ara..." autocomplete="on">
+                <button>Search</button>
+            </div>
+        </div>
+        <div class="movies">
+            <div class="d-flex">
+                <h3>İzlemek Ücretsiz</h3>
+                <div class="switch-type--div">
+                    <button [ngClass]="{'selected': movieType === 1 }" (click)="changeType(1)">Filmler</button>
+                    <button [ngClass]="{'selected': movieType === 2 }" (click)="changeType(2)">Tv</button>
+                </div>
+            </div>
+            <div class="movies-area" *ngIf="movieType == 1">
+                <div *ngFor="let movie of movies" [routerLink]="['movie-detail']"
+                    [state]="{ id:movie.id, type:'movie/'}">
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face{{movie.poster_path}}" alt="">
+                    <p class="header">{{movie.title}}</p>
+                    <p>{{movie.release_date}}</p>
+                </div>
+
+
+            </div>
+            <div class="movies-area" *ngIf="movieType == 2">
+                <div *ngFor="let item of tvs" [routerLink]="['movie-detail']" [state]="{ id:item.id, type:'tv/'}">
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face{{item.poster_path}}" alt="">
+                    <p class="header">{{item.name}}</p>
+                    <p>{{item.first_air_date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="main" *ngIf="type == 'movie/'"
+    style='background-image: linear-gradient(to bottom right, rgba(10.59%, 11.37%, 14.90%, 1.00), rgba(10.59%, 11.37%, 14.90%, 0.84)), url("https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces{{movie.poster_path}}")'>
+    <div class="container">
+        <div class="banner">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face{{movie.poster_path}}" alt="">
+                </div>
+                <div class="col-sm-9 information">
+                    <p class="header">{{movie.title}}</p>
+                    <div class="d-flex">
+                        <p class="sub-header">{{movie.release_date}}</p>
+                        <div *ngFor="let genre of movie.genres">
+                            <p class="sub-header">{{genre.name}}</p>
+                        </div>
+                    </div>
+                    <p>{{movie.tagline}}</p>
+                    <h4>Summary</h4>
+                    <p>{{movie.overview}}</p>
+                    <div class="row">
+                        <div class="col-sm-4 text-left" *ngFor="let company of movie.production_companies">
+                            <div>
+                                <!-- <img class="companies" src="https://www.themoviedb.org/t/p/w220_and_h330_face{{company.logo_path}}"
+                                    alt=""> -->
+                                <p class="companies-p">{{company.name}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main" *ngIf="type == 'tv/'"
+    style='background-image: linear-gradient(to bottom right, rgba(10.59%, 11.37%, 14.90%, 1.00), rgba(10.59%, 11.37%, 14.90%, 0.84)), url("https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces{{tv.poster_path}}")'>
+    <div class="container">
+        <div class="banner">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face{{tv.poster_path}}" alt="">
+                </div>
+                <div class="col-sm-9 information">
+                    <p class="header">{{tv.name}}</p>
+                    <div class="d-flex">
+                        <p class="sub-header">{{tv.first_air_date}}</p>
+                        <div *ngFor="let genre of tv.genres">
+                            <p class="sub-header">{{genre.name}}</p>
+                        </div>
+                    </div>
+                    <p>{{tv.tagline}}</p>
+                    <h4>Summary</h4>
+                    <p>{{tv.overview}}</p>
+                    <div class="row">
+                        <div class="col-sm-4 text-left" *ngFor="let company of tv.production_companies">
+                            <div>
+                                <!-- <img class="companies" src="https://www.themoviedb.org/t/p/w220_and_h330_face{{company?.logo_path}}"
+                                    alt=""> -->
+                                <p class="companies-p">{{company.name}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

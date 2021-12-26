@@ -1,0 +1,63 @@
+$primary-color: #FFFFFF;
+$pageDarkBlue: rgb(3,37,65);
+$headerFontSize:16px;
+$bannerHeader:2.5em;
+$bannerSubHeader: 2em;
+$border-radius:30px;
+
+.main{
+    margin-top: 64px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner{
+        padding: 50px 50px 50px;
+
+        h2 {
+            color: $primary-color;
+            font-size: $bannerHeader;
+            font-weight: bold;
+        }
+        h4{
+            color: $primary-color;
+            font-size: $bannerSubHeader;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            -webkit-box-shadow: 2px 2px 11px 5px rgba(255,255,255,0.4); 
+            box-shadow: 2px 2px 11px 5px rgba(255,255,255,0.4);
+        }
+        p{
+            color: $primary-color;
+        }
+
+        .header {
+            font-size: $bannerHeader;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .sub-header {
+            margin-right: 15px;
+        }
+
+        .companies{
+            height: 100px;
+            border-radius: 50%;
+            object-fit: fill;
+            width: 100px;
+            margin-top: 15px;
+            background-color: $primary-color;
+        }
+
+        .companies-p {
+            margin-top: 10px;
+            font-size: $headerFontSize;
+            font-weight: 600;
+        }
+        
+    }
+}

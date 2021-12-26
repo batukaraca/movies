@@ -1,0 +1,114 @@
+$primary-color: #FFFFFF;
+$pageDarkBlue: rgb(3,37,65);
+$headerFontSize:16px;
+$bannerHeader:3em;
+$bannerSubHeader: 2em;
+$border-radius:30px;
+
+
+.main{
+    margin-top: 64px;
+    width: 100%;
+
+    .banner{
+        height: 400px;
+        background-image:  linear-gradient(to right, rgba($pageDarkBlue, 0.8) 0%, rgba($pageDarkBlue, 0) 100%), url("../../assets/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 50px 60px;
+
+        h2 {
+            color: $primary-color;
+            font-size: $bannerHeader;
+            font-weight: bold;
+        }
+        h4{
+            color: $primary-color;
+            font-size: $bannerSubHeader;
+        }
+
+        .search {
+            position: relative;
+            input{
+                margin-top: 40px;
+                width: 100%;
+                border-radius: $border-radius;
+                padding: 5px 100px 5px 20px;
+                font-size: $headerFontSize;
+                color: rgba(0,0,0,0.5);
+                line-height: 36px;
+                outline: none;
+                border: none;
+            }
+            button {
+                position: absolute;
+                right: 0;
+                line-height: 36px;
+                bottom: 0;
+                border-radius: $border-radius;
+                font-size: $headerFontSize;
+                color: $primary-color;
+                font-weight: bold;
+                border: none;
+                padding: 5px 20px;
+                background: linear-gradient(to right, rgba(30,213,169, 1) 0%, rgba(1,180,228, 1) 100%);
+            }
+        }
+        
+    }
+
+    .movies {
+        padding: 30px 50px 30px;
+
+        h3{
+            margin-bottom: 0;
+        }
+
+        .switch-type--div{
+            border: 1px solid #000;
+            border-radius:$border-radius;
+            margin-left: 20px;
+
+            button{
+                border-radius:$border-radius;
+                line-height:32px;
+                margin-right: 15px;
+                border: none;
+                background-color: transparent;
+                padding: 0 20px;
+            }
+            button:last-child{
+                margin-right: 0;
+            }
+
+            button.selected {
+                background-color: $pageDarkBlue;
+                color: rgba(1,180,228,1);
+            }
+        }
+
+        .movies-area {
+            width: 100%;
+            overflow-x: scroll;
+            display: flex;
+            margin-top: 30px;
+            cursor: pointer;
+
+            div {
+                margin-right: 30px;
+
+                img {
+                    height: 250px;
+                    border-radius: 10px;
+                }
+                .header {
+                    font-size: $headerFontSize;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
